@@ -10,7 +10,7 @@ try{
          die('Erreur:' .$e->getMessage());
      } 
       $search=$_GET['search'] ?? '';
-      // echo $search;
+    
       if($search){
       $statement = $con->prepare('SELECT *FROM produit WHERE marque_pr=:marque_pr ORDER BY d_time DESC ');
       $statement->bindValue(':marque_pr',"$search"); 
@@ -66,12 +66,7 @@ try{
               font-size:30px;
               font-weight:500;
             }
-            /* .btns{
-              display: flex;
-              justify-content: center;
-               align-items: center;
-            
-            } */
+      
             .flexing{
               display:flex;
             }
@@ -95,32 +90,6 @@ try{
     </div>
     
   
-  <!-- 
-        <div class="card shadow mb-4">
-      
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    
-                        <tr>
-                            <th class="btn  btn-sm btn-primary">Name </th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                              <th>Action</th>
-
-                        </tr>
-                </table>
-                </div>
-                </div>
-            </div>
-            <hr>
-            <!-- =================================== Footer =============================== -->
-              <!-- Footer -->
-             
-              <!-- </div> -->
               <br>
    
     <div class="card shadow mb-4">
@@ -201,11 +170,10 @@ try{
                 </div>
             </div>
             <hr>
-            <!-- =================================== Footer =============================== -->
-              <!-- Footer -->
+          
              
         </div>
-        <!-- End of Content Wrapper -->
+ 
 
     </div>
     </body>
